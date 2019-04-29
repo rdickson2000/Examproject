@@ -1,39 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   alphabet.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdickson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/29 09:58:30 by rdickson          #+#    #+#             */
-/*   Updated: 2019/04/29 10:34:33 by rdickson         ###   ########.fr       */
+/*   Created: 2019/04/26 13:05:18 by rdickson          #+#    #+#             */
+/*   Updated: 2019/04/26 13:07:48 by rdickson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int	main(void)
 {
-	write(1, &c, 1);
-}
-
-int		main(int argc, char **argv)
-{
-	int i;
-
-	i = 0;
-	if (argc == 2)
-	{
-		while (argv[1][i])
-		{
-			i++;
-		}
-		while (i >= 0)
-		{
-			ft_putchar(argv[1][i]);
-			i--;
-		}
-	}
-	ft_putchar('\n');
+	write(1, "abcdefghijklmnopqrstuvxyz\n", 27);
 	return (0);
 }
