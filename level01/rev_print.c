@@ -5,33 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rdickson <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/26 11:18:04 by rdickson          #+#    #+#             */
-/*   Updated: 2019/04/26 12:00:54 by rdickson         ###   ########.fr       */
+/*   Created: 2019/04/29 09:58:30 by rdickson          #+#    #+#             */
+/*   Updated: 2019/04/29 10:30:24 by rdickson         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int	ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (0);
 }
 
-int	main(int ac, char **av)
+int		main(int argc, char **argv)
 {
 	int i;
 
 	i = 0;
-	if (ac == 2)
+	if (argc == 2)
 	{
-		while (av[1][i])
+		while (argv[1][i])
 		{
 			i++;
 		}
 		while (i >= 0)
 		{
-			ft_putchar(av[1][i]);
+			ft_putchar(argv[1][i]);
 			i--;
 		}
 	}
